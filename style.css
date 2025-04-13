@@ -1,0 +1,277 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: grey;
+    height: 100vh;
+    overflow: auto;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('https://images.wallpaperscraft.com/image/single/laptop_keyboard_glow_181211_3840x2160.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.29);
+    background-blend-mode: darken;
+    z-index: -1;
+}
+
+.logo-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(32deg, #ff416c, #ff4b2b);
+    animation: rotate 3s linear infinite;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #000;
+    animation: pulse 2s infinite;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+.navbar {
+    font-family: 'Lobster', cursive;
+    background-color: #1a1a1a;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+    padding: 10px 0;
+}
+
+.navbar a {
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 7px 12px;
+    margin: 0 4px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar a.active {
+    background-color: #444;
+    color: white;
+}
+
+#content {
+    padding: 20px;
+    font-size: 16px;
+    opacity: 0;
+    animation: fadeIn 3s forwards, slideUp 1.5s forwards;
+    animation-delay: 0.5s;
+    max-width: 1490px;
+    text-align: justify;
+    line-height: 1.5;
+    margin-top: 60px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+    0% { transform: translateY(50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loading-text {
+    font-family: 'Lobster', cursive;
+    margin-top: 20px;
+    font-size: 0.9em;
+    transform: translate(-50%, -50%);
+    width: 24.155px;
+    height: 120px;
+    text-align: center;
+    color: #ff4b2b;
+}
+
+.hidden-tab {
+    display: none;
+    padding: 20px;
+    margin-top: 20px;
+    background: #ff416c;
+    color: white;
+    border-radius: 10px;
+}
+
+.hidden-tab.active {
+    display: block;
+}
+
+button {
+    background-color: #5a7c8a;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Lobster', cursive;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #222;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.hero {
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 3rem 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    text-align: left;
+    max-width: 900px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+#fiod-section, #foood-section, #fooood-section {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+#about-section {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+}
+
+.profile-pic img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid rgba(128, 128, 128, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-right: 30px;
+}
+
+#about-section div {
+    max-width: 75%;
+}
+
+.about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 15px;
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 17px;
+}
+
+.project-card {
+    flex: 1;
+    min-width: 280px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #222;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(0.97);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.project-button {
+    padding: 10px 20px;
+    background-color: #4b6e7a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.project-button:hover {
+    background-color: #5c8190;
+}
