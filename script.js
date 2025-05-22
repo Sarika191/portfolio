@@ -25,39 +25,56 @@ function typeWriter() {
   }
 }
 
-typeWriter();
+window.onload = function () {
+  const loadingScreen = document.getElementById('loadingScreen');
+  setTimeout(() => {
+    loadingScreen.style.display = 'none';
+  }, 1300);
 
-    // Loading screen on page load
-    window.onload = function () {
-        const loadingScreen = document.getElementById('loadingScreen');
-        setTimeout(() => {
-            loadingScreen.style.display = 'none';
-        }, 1300);
-        type(); // Call typing effect here after page load
-    };
+  typeWriter();
+};
 
-    // Page change with loading
-    function changePage(event, page) {
-        const loadingScreen = document.getElementById('loadingScreen');
-        const links = document.querySelectorAll('.navbar a');
-        links.forEach(link => link.classList.remove('active'));
-        event.target.classList.add('active');
+function changePage(event, page) {
+  const loadingScreen = document.getElementById('loadingScreen');
+  const links = document.querySelectorAll('.navbar a');
+  links.forEach(link => link.classList.remove('active'));
+  event.target.classList.add('active');
 
-        loadingScreen.style.display = 'flex';
-        setTimeout(() => {
-            loadingScreen.style.display = 'none';
-        }, 500);
+  loadingScreen.style.display = 'flex';
+  setTimeout(() => {
+    loadingScreen.style.display = 'none';
+  }, 500);
+}
+
+function toggleTab() {
+  var tab = document.getElementById("hiddenTab");
+  tab.classList.toggle("active");
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  alert("Thank you for contacting me! I'll get back to you soon.");
+  event.target.reset();
+}
+
+// UPDATED SCROLL LISTENER
+window.addEventListener('scroll', function () {
+  const sections = document.querySelectorAll('section[id]');
+  const links = document.querySelectorAll('.navbar a');
+  let current = '';
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+      current = section.getAttribute('id');
     }
+  });
 
- 
-
-    function toggleTab() {
-        var tab = document.getElementById("hiddenTab");
-        tab.classList.toggle("active");
+  links.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === `#${current}`) {
+      link.classList.add('active');
     }
-
-    function handleSubmit(event) {
-        event.preventDefault();
-        alert("Thank you for contacting me! I'll get back to you soon.");
-        event.target.reset();
-    } 
+  });
+});
