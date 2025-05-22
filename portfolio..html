@@ -8,14 +8,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
-
-    <style>
+<style>
         body {
 font-family: 'Segoe UI', sans-serif;
 
   margin: 0;
   padding: 0;
-  color: grey;
+  color: #fff8;
   height: 100vh;
   overflow: auto;
   position: relative;
@@ -33,43 +32,46 @@ body::before {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: rgba(0, 0, 0, 0.29); /* Dull overlay */
+  background-color: rgba(0, 0, 0, 0.29); 
   background-blend-mode: darken;
   z-index: -1; /* Send it behind everything */
 }
 
 
-         .logo-container {
-        position: fixed; /* Centered within the viewport */
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+ .logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
-    .logo {
-        position: relative; /* To contain the pseudo-element */
-        width: 60px; /* Smaller size for the logo */
-        height: 60px;
-        border-radius: 50%; /* Circular shape */
-        background: linear-gradient(32deg, #ff416c, #ff4b2b);
-        animation: rotate 3s linear infinite;
-    }
+.logo {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(32deg, #ff5c82, #a12711);
+  animation: rotate 3s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
 
-    .logo::before {
-        content: '';
-        position: absolute;
-        top: 50%; /* Center within the logo */
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 50px; /* Smaller size for the inner circle */
-        height: 50px;
-        border-radius: 50%; /* Circular shape */
-        background-color: #000; /* Black inner circle */
-        animation: pulse 2s infinite;
-    }
+.logo::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #000;
+  animation: pulse 2s infinite;
+   
+}
+
 
     @keyframes rotate {
         0% {
@@ -146,29 +148,33 @@ body::before {
             100% { transform: translateY(0); opacity: 1; }
         }
  .loading-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            z-index: 1000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+             position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
         }
 
         .loading-text {
-           font-family: 'Lobster', cursive;
-            margin-top: 20px;
-            font-size: 0.9em;
-          transform: translate(-50%, -50%);
-        width: 24.155px; 
-        height: 120px;
-            text-align: center;
-            color: #ff4b2b;
+         position: absolute;
+  font-family: 'Lobster', cursive;
+  font-size: 0.75rem;
+  color: #ff4b2b;
+  text-align: center;
+  max-width: 70%;
+  word-wrap: break-word;
+  z-index: 2;
+  pointer-events: none;
         }
+        
+     
+
 .hidden-tab {
             display: none; /* Initially hidden */
             padding: 20px;
@@ -206,7 +212,7 @@ body::before {
 html {
             scroll-behavior: smooth;
         }
-.hero {
+#hero {
   background: rgba(0, 0, 0, 0.9);
   color: white;
   padding: 3rem 1rem;
@@ -214,7 +220,7 @@ html {
   justify-content: center;
 }
 
-.hero-content {
+#hero-content {
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -223,85 +229,22 @@ html {
   max-width: 900px;
 }
 
-.hero-text {
+#hero-text {
   flex: 1;
 }
 
-const style = document.createElement('style');
-style.innerHTML = `
-    .zoom-image-container {
-        position: relative;
-        overflow: hidden;
-        height: 145px; /* Adjust as needed */
-        margin-top: 30px;
-    }
 
-    .zoom-image {
-        width: 40%;
-        height: 30%;
-        object-fit: cover;
-        transition: transform 1s ease;
-    }
-
-    .zoom-image-container:hover .zoom-image {
-        transform: scale(1.05); /* Slight zoom on hover */
-    }
-
-    /* Zoom-out effect on scrolling */
-    .zoom-image {
-        transform: scale(1);
-    }
-
-    @keyframes scrollZoomOut {
-        from {
-            transform: scale(1.05);
-        }
-        to {
-            transform: scale(1);
-        }
-    }
-`;
-document.head.appendChild(style);
-const style = document.createElement('style');
-style.innerHTML = `
-    .zoom-imaage-container {
-        position: relative;
-        overflow: hidden;
-        height: 100px; /* Adjust as needed */
-        margin-top: 30px;
-    }
-
-   document.head.appendChild(style);
-
- #fiod-section {
-            margin-top: 50px;
-            padding: 20px;
-            background-color: rgba(0,0,0,0.8);
-            text-align: center;
-        }
  #foood-section {
             margin-top: 50px;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(9, 9, 9, 0.74);
             text-align: center;
         }
- #fooood-section {
-            margin-top: 50px;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.8);
-            text-align: center;
-        }
+
 html {
             scroll-behavior: smooth;
         }
-#about-section {
-            display: flex;
-            align-items: center;
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 10px;
-
-        }
-        .profile-pic img {
+ .profile-pic img {
       width: 200px;
       height: 200px;
       object-fit: cover;
@@ -310,16 +253,26 @@ html {
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       margin-right: 30px;
     }
+#about-section {
+            display: flex;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.85);
+            padding: 10px;
+
+        }
+        
         #about-section div {
             max-width: 75%;
         }
-       .about-container {
+  
+ .about-container {
     max-width: 1000px;
-    margin: 0 auto;         /* Centers the container horizontally */
+    margin: 0 auto;        
     padding: 15px;
-    text-align: justify;    /* Justifies text to align both left and right sides */
-    line-height: 1.5;       /* Adds spacing between lines for readability */
+    text-align: justify;   
+    line-height: 1.5;       
     font-size: 17px;
+    font-align:center;
 }
  .project-card {
     flex: 1;
@@ -349,31 +302,106 @@ html {
   .project-button:hover {
     background-color: #5c8190;
   }
+/* Responsive Fixes for All Devices */
+@media (max-width: 1024px) {
+  #hero-content, #about-section, .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    </style>
-</head>
+  .profile-pic img {
+    margin: 0 auto 20px;
+  }
+
+  #hero-text {
+    text-align: center;
+  }
+
+  .logo-container {
+    top: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+ 
+
+  .project-card {
+    min-width: 90%;
+  }
+
+  #about-section {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .about-container {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .profile-pic img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .loading-text {
+    font-size: 0.8em;
+    width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  #hero {
+    padding: 2rem 1rem;
+  }
+
+  .logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .logo::before {
+    width: 38px;
+    height: 38px;
+  }
+
+  button, .project-button {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  #content {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  
+}
+
+</style>
+   
+       </head>
 <body>
     <!-- Loading Screen -->
     <div class="loading-screen" id="loadingScreen">
         <div class="logo"></div>
         <div class="loading-text">Loading</div>
     </div>
+    </div>
 
-    <!-- Navigation Bar -->
-    <div class="navbar">
- <a href="#fooood-section" class="changePage" onclick="changePage(event, 'Contacts')">Contacts</a>
- 
-   <a href="#foood-section" class="changePage" onclick="changePage(event, 'Websites')">Projects</a>
-      <a href="#fiod-section" class="changePage" onclick="changePage(event, 'About Us')">About Me</a>
-        <a href="#" class="active" onclick="goHome()"><span class="material-symbols-outlined">
+    
+<nav class="navbar">
+  <a href="#contact-section">Contact</a>
+   <a href="#foood-section">Projects</a>
+  <a href="#about-section">About</a>
+    <a href="#hero" class="active" onclick="goHome()"><span class="material-symbols-outlined">
 home
 </span></a>
-   
-    </div>
+</nav>
 
     <!-- Content -->
  <div id="content" >
-<section class="hero">
+<section id="hero">
 
   <div class="hero-content">
     <div class="hero-text">
@@ -390,16 +418,16 @@ home
 
 </div>
 
-<div id="fiod-section">
-<br>
 
 
 <section id="about-section">
+  <br>
 <center>
  
     <div>
         <h1 style="color: white;">About Me</h1>
 <div class="about-container">
+<center>
 <p>
  Hello! I'm <strong>Sarika Kaushal</strong>, a passionate tech enthusiast and aspiring engineer currently pursuing a degree in <strong>Computer Science and Engineering (CSE)</strong> from <strong>Madan Mohan Malaviya University of Technology (MMMUT)</strong>, currently in my pre-final year.
 
@@ -421,7 +449,7 @@ home
 <a href="https://drive.google.com/file/d/10Op4NnauBhLl-LM7MkN82sLypZZ8sb60/view?usp=sharing" >
   <span class="material-symbols-outlined" style="cursor: pointer; color:#90D5FF;">download</span>
 </a>
-
+</center>
 </em>
 
 
@@ -433,13 +461,13 @@ home
     </div>
 </section>              
     </center>
-   </div>
+   
 
-<div id="foood-section">
+<section id="foood-section">
 <br>
-<h1 style="font-size: 2.5em; margin-bottom: 20px; color: white;">Explore My Projects</h1>
+<h1 style="font-size: 2.2em; margin-bottom: 20px; color: white;">Explore My Projects</h1>
 <center>
-<div id="content" style="background-color: #111; padding: 30px; text-align: center; color: white; border-radius: 12px; width:80%;">
+<div id="content" style="background-color: #111; padding: 30px; text-align: center; color: white; border-radius: 12px; width:60%;">
   
   <p style="font-size: 1.3em; margin-bottom: 30px; color:#888">Click the links below to visit my featured works!</p>
 
@@ -474,22 +502,35 @@ home
   </button>
 </div>
 
+<div class="project-card">
+  <p style="font-weight: bold;">Web Project: Student-Teacher Appointment</p>
+  <p style="margin-bottom: 15px;">Manage appointments easily between students and teachers with a user-friendly interface using Firebase!</p>
+  <button onclick="window.open('https://github.com/Sarika191/Student-Teacher-Appointment','_blank');"
+          class="project-button">
+    Teacher Appointment
+  </button>
 </div>
 
 
-  </div>
+</div>
+
+
+</section>
 </center>
 </div>
 
-<div id="fooood-section">
 <section id="contact-section" style="
+           margin-top: 50px;
+            padding: 20px;
+            background-color: rgba(9, 9, 9, 0.79);
     background: linear-gradient(135deg);
     padding: 60px 20px;
     text-align: center;
     font-family: 'Segoe UI', sans-serif;
     transition: background 0.3s ease;
 ">
-  <h1 style="color: white;font-size: 2.5rem; margin-bottom: 10px;">Contact Me</h1>
+  <h1 style="color: white;font-size: 2.3rem; margin-bottom: 10px;">Contact Me</h1>
+  
   <p style="font-size: 1.1rem; color: #999; margin-bottom: 30px;">
     I'd love to hear from you! Please fill out the form below.
   </p>
@@ -512,7 +553,7 @@ home
        width: 90%;
     padding: 12px;
     margin-bottom: 15px;
-    border: 1px solid #777;
+    border: 1px solid #5b5b5b;
     border-radius: 8px;
     resize: vertical;
     background-color: #333;
@@ -521,7 +562,7 @@ home
     transition: all 0.3s ease;
     box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
 " onfocus="this.style.borderColor='#555'; this.style.backgroundColor='#fffbe6';" 
-   onblur="this.style.borderColor='#ccc'; this.style.backgroundColor='#333';"><br>
+   onblur="this.style.borderColor='#ccc'; this.style.backgroundColor='#777'; "><br>
 
     <label style="font-weight: bold;">Email</label><br><br>
     <input type="email" name="email" required style="
@@ -537,7 +578,7 @@ home
     transition: all 0.3s ease;
     box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
 " onfocus="this.style.borderColor='#555'; this.style.backgroundColor='#fffbe6';" 
-   onblur="this.style.borderColor='#ccc'; this.style.backgroundColor='#333';"><br>
+   onblur="this.style.borderColor='#ccc'; this.style.backgroundColor='#777'; "><br>
 
  <label for="message" style="font-weight: bold;">Message</label><br><br>
 <textarea name="message" id="message" rows="4" required style="
@@ -553,7 +594,7 @@ home
     transition: all 0.3s ease;
     box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
 " onfocus="this.style.borderColor='#555'; this.style.backgroundColor='#fffbe6';" 
-   onblur="this.style.borderColor='#ccc'; this.style.backgroundColor='#333';"></textarea><br>
+   onblur="this.style.borderColor='#ccc'; this.style.backgroundColor='#777'; "></textarea><br>
 
 
     <label style="font-weight: bold;">Rate My Portfolio</label><br><br>
@@ -570,7 +611,7 @@ width: 95%;
     transition: all 0.3s ease;
     box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
 " onfocus="this.style.borderColor='#555'; this.style.backgroundColor='#fffbe6';" 
-   onblur="this.style.borderColor='#ccc'; this.style.backgroundColor='#333';">
+   onblur="this.style.borderColor='#ccc'; this.style.backgroundColor='#777'; ">
       <option value="" disabled selected>Select</option>
       <option>Excellent</option>
       <option>Good</option>
@@ -590,10 +631,11 @@ width: 95%;
     " onmouseover="this.style.backgroundColor='#555'; this.style.transform='scale(1.05)'" onmouseout="this.style.backgroundColor='#333'; this.style.transform='scale(1)'">
       Submit
     </button>
+  
 </center>
   </form>
 </section>
-</div>
+  
           <footer style="text-align: center; padding: 20px; background-color: #333; color: white;">
     © 2025 Sarika Kaushal | All rights are reserved | Thank you for visiting!
     <br>
@@ -606,7 +648,8 @@ width: 95%;
 
 </footer>
         
-   <script>const texts = [
+   <script>  
+       const texts = [
   "Hello, I'm Sarika!",
   "Tech Enthusiast | Web Developer | CSE Student"
 ];
@@ -633,41 +676,60 @@ function typeWriter() {
   }
 }
 
-typeWriter();
+window.onload = function () {
+  const loadingScreen = document.getElementById('loadingScreen');
+  setTimeout(() => {
+    loadingScreen.style.display = 'none';
+  }, 1300);
 
-    // Loading screen on page load
-    window.onload = function () {
-        const loadingScreen = document.getElementById('loadingScreen');
-        setTimeout(() => {
-            loadingScreen.style.display = 'none';
-        }, 1300);
-        type(); // Call typing effect here after page load
-    };
+  typeWriter();
+};
 
-    // Page change with loading
-    function changePage(event, page) {
-        const loadingScreen = document.getElementById('loadingScreen');
-        const links = document.querySelectorAll('.navbar a');
-        links.forEach(link => link.classList.remove('active'));
-        event.target.classList.add('active');
+function changePage(event, page) {
+  const loadingScreen = document.getElementById('loadingScreen');
+  const links = document.querySelectorAll('.navbar a');
+  links.forEach(link => link.classList.remove('active'));
+  event.target.classList.add('active');
 
-        loadingScreen.style.display = 'flex';
-        setTimeout(() => {
-            loadingScreen.style.display = 'none';
-        }, 500);
+  loadingScreen.style.display = 'flex';
+  setTimeout(() => {
+    loadingScreen.style.display = 'none';
+  }, 500);
+}
+
+function toggleTab() {
+  var tab = document.getElementById("hiddenTab");
+  tab.classList.toggle("active");
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  alert("Thank you for contacting me! I'll get back to you soon.");
+  event.target.reset();
+}
+
+// UPDATED SCROLL LISTENER
+window.addEventListener('scroll', function () {
+  const sections = document.querySelectorAll('section[id]');
+  const links = document.querySelectorAll('.navbar a');
+  let current = '';
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+      current = section.getAttribute('id');
     }
+  });
 
- 
-
-    function toggleTab() {
-        var tab = document.getElementById("hiddenTab");
-        tab.classList.toggle("active");
+  links.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === `#${current}`) {
+      link.classList.add('active');
     }
+  });
+});
 
-    function handleSubmit(event) {
-        event.preventDefault();
-        alert("Thank you for contacting me! I'll get back to you soon.");
-        event.target.reset();
-    }    </script>
+   </script>
 </body>
 </html>
