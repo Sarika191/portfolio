@@ -1,4 +1,4 @@
-                                                                  🌐 Personal Portfolio Website
+ 🌐 Personal Portfolio Website
 
 Welcome to my personal portfolio! This website is designed to showcase my skills, projects, experience, and creative work in an interactive and visually engaging manner.
 
@@ -41,7 +41,7 @@ Allow easy access to my resume and contact info
 Live Link
 
 Visit My Portfolio
-https://raw.githack.com/Sarika191/portfolio/806ef5369eb0739cf47d7b46adc9b328b9dfe453/portfolio..html
+https://raw.githack.com/Sarika191/portfolio/1a657331bfe1a07738da2077f1472da0d73e1995/portfolio..html
 
 Contact Me
 
