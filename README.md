@@ -1,54 +1,54 @@
-<header>
+                                                                  🌐 Personal Portfolio Website
 
-<!--
-  <<< Author notes: Course header >>>
-  Include a 1280×640 image, course title in sentence case, and a concise description in emphasis.
-  In your repository settings: enable template repository, add your 1280×640 social image, auto delete head branches.
-  Add your open source license, GitHub uses MIT license.
--->
+Welcome to my personal portfolio! This website is designed to showcase my skills, projects, experience, and creative work in an interactive and visually engaging manner.
 
-# GitHub Pages
+About the Project
 
-_Create a site or blog from your GitHub repositories with GitHub Pages._
+This responsive web portfolio acts as my digital resume and creative space. It highlights my journey as a Computer Science and Engineering (CSE) student at MMMUT, featuring:
 
-</header>
+• Animated loading screen with custom rotating logo
+• Interactive hero section with a typewriter effect
+• “About Me” section with bio, university, and interests
+• Projects section linking to live demos and GitHub repos
+• Stylish contact form with input focus animations
+• Footer with contact links (LinkedIn, Email)
 
-<!--
-  <<< Author notes: Step 1 >>>
-  Choose 3-5 steps for your course.
-  The first step is always the hardest, so pick something easy!
-  Link to docs.github.com for further explanations.
-  Encourage users to open new tabs for steps!
--->
+Tech Stack
 
-## Step 1: Enable GitHub Pages
+HTML5 – Semantic structure
+CSS3 – Custom animations, gradients, responsive design
+JavaScript – Typewriter effect, scroll-based nav, dynamic form behavior
+Google Fonts & Material Icons – Typography and visual symbols
+Firebase (for other projects) – Real-time backend for appointment system
+Netlify / GitHack – Hosting and deployment
 
-_Welcome to GitHub Pages and Jekyll :tada:!_
+Features
 
-The first step is to enable GitHub Pages on this [repository](https://docs.github.com/en/get-started/quickstart/github-glossary#repository). When you enable GitHub Pages on a repository, GitHub takes the content that's on the main branch and publishes a website based on its contents.
+💫 Smooth scroll and animated transitions
+🖼️ Background image with dark-blend for focus
+📱 Mobile-first responsive design
+🧠 Typewriter intro and creative layout
+🔗 Project cards with external links to live apps and GitHub
 
-### :keyboard: Activity: Enable GitHub Pages
+Goals
 
-1. Open a new browser tab, and work on the steps in your second tab while you read the instructions in this tab.
-1. Under your repository name, click **Settings**.
-1. Click **Pages** in the **Code and automation** section.
-1. Ensure "Deploy from a branch" is selected from the **Source** drop-down menu, and then select `main` from the **Branch** drop-down menu.
-1. Click the **Save** button.
-1. Wait about _one minute_ then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
-   > Turning on GitHub Pages creates a deployment of your repository. GitHub Actions may take up to a minute to respond while waiting for the deployment. Future steps will be about 20 seconds; this step is slower.
-   > **Note**: In the **Pages** of **Settings**, the **Visit site** button will appear at the top. Click the button to see your GitHub Pages site.
+Build a stylish and responsive personal portfolio
+Create an interactive experience using only HTML, CSS, and vanilla JS
+Host my existing projects in one place
+Allow easy access to my resume and contact info
 
-<footer>
 
-<!--
-  <<< Author notes: Footer >>>
-  Add a link to get support, GitHub status page, code of conduct, license link.
--->
+Live Link
 
----
+Visit My Portfolio
+https://raw.githack.com/Sarika191/portfolio/806ef5369eb0739cf47d7b46adc9b328b9dfe453/portfolio..html
 
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/github-pages) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
+Contact Me
 
-&copy; 2023 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+LinkedIn: Sarika Kaushal
+https://www.linkedin.com/in/sarika-kaushal-192a92283
+Email: sarika99770@gmail.com
 
-</footer>
+License
+
+This project is open for inspiration and learning. Please credit appropriately if reused.
