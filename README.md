@@ -41,7 +41,7 @@ Allow easy access to my resume and contact info
 Live Link
 
 Visit My Portfolio
-https://raw.githack.com/Sarika191/portfolio/1a657331bfe1a07738da2077f1472da0d73e1995/portfolio..html
+https://raw.githack.com/Sarika191/portfolio/c141aebc3e9dc4baf9692496b13bf07a66aaff87/portfolio.html
 
 Contact Me
 
