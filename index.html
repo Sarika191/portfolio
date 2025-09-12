@@ -1,297 +1,186 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio✨</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-
-<link rel="stylesheet" href="style.css">
-   
-       </head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Sarika Kaushal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  
+</head>
 <body>
-    <!-- Loading Screen -->
-    <div class="loading-screen" id="loadingScreen">
-        <div class="logo"></div>
-        <div class="loading-text">Loading</div>
-    </div>
-    </div>
 
-    
-<nav class="navbar">
-  <a href="#contact-section">Contact</a>
-   <a href="#foood-section">Projects</a>
-  <a href="#about-section">About</a>
-    <a href="#hero" class="active" onclick="goHome()"><span class="material-symbols-outlined">
-home
-</span></a>
-</nav>
+  <div class="loading-screen" id="loadingScreen" aria-hidden="false">
+    <div class="logo" role="img" aria-label="logo"></div>
+    <div class="loading-text">Loading</div>
+  </div>
 
-    <!-- Content -->
- <div id="content" >
-<section id="hero">
+  <nav class="navbar" aria-label="Main navigation">
+    <a href="#contact-section" data-target="contact-section" title="Contact">
+      <span class="material-symbols-outlined">mail</span>
+    </a>
+    <a href="#foood-section" data-target="foood-section" title="Projects">
+      <span class="material-symbols-outlined">work</span>
+    </a>
+    <a href="#about-section" data-target="about-section" title="About">
+      <span class="material-symbols-outlined">person</span>
+    </a>
+    <a href="#hero" class="active" data-target="hero" title="Home" onclick="goHome()">
+      <span class="material-symbols-outlined">home</span>
+    </a>
+  </nav>
 
-  <div class="hero-content">
-    <div class="hero-text">
-<center>
-     <h1 id="typewriter-title"></h1>
-<h4 id="typewriter-desc"></h4>    </div>
+  <main id="main">
+
+
+    <section id="hero" aria-labelledby="typewriter-title">
+      <div class="hero-inner">
+
+        <div class="profile-col">
+          <div class="profile-pic" id="profileWrap">
+            
+            <img id="profileImage"
+                 src="/profilepicture.jpg"
+                 alt="Sarika Kaushal — profile">
+          </div>
+        </div>
+
+        <div class="hero-col">
+          <h1 id="typewriter-title" aria-live="polite"></h1>
+          <h4 id="typewriter-desc" aria-live="polite"></h4>
+
+          <div class="hero-meta" aria-hidden="true">
+            <div class="pill">Machine Learning</div>
+            <div class="pill">Full Stack</div>
+            <div class="pill">Computer Science & Engineering</div>
+          </div>
+        </div>
+
       </div>
- <div class="profile-pic" style="margin-left: 90px;">
-<div class="zoom-image-container">
-      <img src="/profilepic.jpg"alt="Sarika's Photo">
-    </div>
-</div>
-</section>
-
-</div>
+    </section>
 
 
+    <section id="about-section">
+      
+      <div style="text-align:center;">
+        <h1 style="color: rgb(191, 179, 179); margin-top:0;">About Me</h1>
+      </div>
+      <div class="about-container">
+        <center>
+        <p>
+          I’m <strong>Sarika Kaushal</strong>, a passionate Machine Learning trainee, full-stack developer, and creative tech enthusiast, currently pursuing B.Tech in Computer Science and Engineering (CSE) from <strong>Madan Mohan Malaviya University of Technology (MMMUT)</strong>, in my final year.
+        </p>
 
-<section id="about-section">
-  <br>
-<center>
- 
-    <div>
-        <h1 style="color: white;">About Me</h1>
-<div class="about-container">
-<center>
-<div>
-<p>
-  I’m <strong>Sarika Kaushal</strong>, a passionate Machine Learning trainee, full-stack developer, and creative tech enthusiast, currently pursuing B.Tech in Computer Science and Engineering (CSE) from <strong>Madan Mohan Malaviya University of Technology (MMMUT)</strong>, in my final year.
-</p>
+        <p>
+          I’ve worked as a <strong>Machine Learning Trainee & Intern at Krutanics</strong> (June–Sept 2025), where I built a <strong>Credit Card Fraud Detection system</strong> using Python, MySQL, and ML techniques, with certification jointly issued by <strong>Krutanics & Accenture</strong>.  
+          As a <strong>Full Stack Developer Intern at Unified Mentor</strong> (Mar–Apr 2025), I developed a <strong>student-teacher appointment system</strong> and my <strong>portfolio website</strong> using HTML, CSS, JavaScript, and Firebase.  
+          Earlier, as a <strong>Graphic & Content Intern at Inamigos Foundation</strong> (Oct–Nov 2024), I created digital content including reels, posters, and blogs for outreach campaigns.
+        </p>
 
-<p>
-  I’ve worked as a <strong>Machine Learning Trainee & Intern at Krutanics</strong> (June–Sept 2025), where I built a <strong>Credit Card Fraud Detection system</strong> using Python, MySQL, and ML techniques, with certification jointly issued by <strong>Krutanics & Accenture</strong>.  
-  As a <strong>Full Stack Developer Intern at Unified Mentor</strong> (Mar–Apr 2025), I developed a <strong>student-teacher appointment system</strong> and my <strong>portfolio website</strong> using HTML, CSS, JavaScript, and Firebase.  
-  Earlier, as a <strong>Graphic & Content Intern at Inamigos Foundation</strong> (Oct–Nov 2024), I created digital content including reels, posters, and blogs for outreach campaigns.
-</p>
+        <p>
+          Beyond internships, I actively build projects — from ML-powered fraud detection to interactive web apps and C++ games — all published on my <strong>GitHub</strong>.  
+          I also served as an <strong>Executive Member of Google Developer Student Clubs (GDG), MMMUT</strong>, leading hackathons, project expos, and orientations, sharpening my leadership skills.
+        </p>
 
-<p>
-  Beyond internships, I actively build projects — from ML-powered fraud detection to interactive web apps and C++ games — all published on my <strong>GitHub</strong>.  
-  I also served as an <strong>Executive Member of Google Developer Student Clubs (GDG), MMMUT</strong>, leading hackathons, project expos, and orientations, sharpening my leadership skills.
-</p>
+        <p>
+          With skills in Python, C++, Java, Firebase, Web Development, and Machine Learning, and achievements like <strong>LeetCode rating 1460</strong>, <strong>CodeChef 1148</strong>, and <strong>HackerRank 4★ in Java & Problem Solving</strong>, I aim to innovate at the intersection of technology and creativity.
+        </p>
 
-<p>
-  With skills in Python, C++, Java, Firebase, Web Development, and Machine Learning, and achievements like <strong>LeetCode rating 1460</strong>, <strong>CodeChef 1148</strong>, and <strong>HackerRank 4★ in Java & Problem Solving</strong>, I aim to innovate at the intersection of technology and creativity.
-</p>
+        <p>
+          Outside of tech, I love anime, manga, and painting — having received <strong>UNESCO recognition</strong> and the <strong>Amrita Sher-Gil Award</strong> for visual arts. These experiences inspire my imagination and fuel my creativity.
+        </p>
 
-<p>
-  Outside of tech, I love anime, manga, and painting — having received <strong>UNESCO recognition</strong> and the <strong>Amrita Sher-Gil Award</strong> for visual arts. These experiences inspire my imagination and fuel my creativity.
-</p>
+        <p><em>Let’s build, innovate, and create impact — one project at a time!</em></p>
 
-<p><em>Let’s build, innovate, and create impact — one project at a time!</em></p>
-
-<em><b>View Resume</b>
-<a href="https://drive.google.com/file/d/1D8HTVLZp0L1MIfEk9v_VzZuxheF3FULo/view?usp=sharing" >
-  <span class="material-symbols-outlined" style="cursor: pointer; color:#90D5FF;">download</span>
-</a>
-</center> 
-</em>
-
-
-</a>
-
-</p>
-</div>
-
-    </div>
-</section>              
+        <p style="margin-top:10px;">
+          <b>View Resume</b>
+          <a href="https://drive.google.com/file/d/1D8HTVLZp0L1MIfEk9v_VzZuxheF3FULo/view?usp=sharing" target="_blank" rel="noopener">
+            <span class="material-symbols-outlined" style="cursor:pointer;color:var(--accent); vertical-align:middle;">download</span>
+          </a>
+        </p>
+      </div>
     </center>
+    </section>
+
+
+    <section id="foood-section">
+      
+      <h1 style="font-size:2.2em; margin-bottom:20px; color:white; text-align:center">Explore My Projects</h1>
+      <div id="content" style="background-color: #111; padding: 30px; text-align: center; color: white; border-radius: 12px; width:100%; max-width:1100px; margin: 0 auto;">
+        <p style="font-size:1.1rem; color:#888; margin-bottom:22px">Click the links below to visit my featured works!</p>
+
+        <div class="projects-grid" role="list">
+          <div class="project-card" role="listitem">
+            <p style="font-weight:bold; margin-top:0">Web Project: Credit Card Fraud Detection</p>
+            <p>Built an ML model using Python, Pandas, and Scikit-learn to detect fraudulent transactions with high accuracy.</p>
+            <button onclick="window.open('https://github.com/Sarika191/creditcard_fraud_detection','_blank');" class="project-button">Fraud Detection</button>
+          </div>
+
+          <div class="project-card" role="listitem">
+            <p style="font-weight:bold">Web Project: Student-Teacher Appointment</p>
+            <p>Manage appointments easily between students and teachers with a user-friendly interface using Firebase!</p>
+            <button onclick="window.open('https://github.com/Sarika191/Teacher_student_appointment_portal','_blank');" class="project-button">Teacher Appointment</button>
+          </div>
+
+          <div class="project-card" role="listitem">
+            <p style="font-weight:bold">Game Project: Tic Tac Toe</p>
+            <p>This is my Tic Tac Toe game project, Cross-O-Cuties. Play the classic game and challenge your friends.</p>
+            <button onclick="window.open('https://github.com/Sarika191/Cross-O-Cuties','_blank');" class="project-button">Cross-O-Cuties</button>
+          </div>
+
+          <div class="project-card" role="listitem">
+            <p style="font-weight:bold">Game Project: Word Scramble</p>
+            <p>Try out Scramble Mania — a fun word game where you unscramble jumbled words within a time limit!</p>
+            <button onclick="window.open('https://github.com/Sarika191/ScrambleMania','_blank');" class="project-button">Scramble Mania</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact-section">
+      <h1 style="text-align:center; color:white; margin-top:0;">Contact Me</h1>
+      <p style="text-align:center; color:#999;">I'd love to hear from you! Please fill out the form below.</p>
+
+      <form onsubmit="handleSubmit(event)" style="max-width:700px;margin:18px auto;background:#111;padding:26px;border-radius:12px;">
+        <label style="font-weight:bold;color:#e8eef2">Name</label><br><br>
+        <input type="text" name="name" required style="width:100%;padding:12px;border-radius:8px;border:1px solid #444;background:#222;color:#fff"><br><br>
+
+        <label style="font-weight:bold;color:#e8eef2">Email</label><br><br>
+        <input type="email" name="email" required style="width:100%;padding:12px;border-radius:8px;border:1px solid #444;background:#222;color:#fff"><br><br>
+
+        <label style="font-weight:bold;color:#e8eef2">Message</label><br><br>
+        <textarea name="message" rows="4" required style="width:100%;padding:12px;border-radius:8px;border:1px solid #444;background:#222;color:#fff"></textarea><br><br>
+
+        <label style="font-weight:bold;color:#e8eef2">Rate My Portfolio</label><br><br>
+        <select name="rating" required style="width:100%;padding:12px;border-radius:8px;border:1px solid #444;background:#222;color:#fff">
+          <option value="" disabled selected>Select</option>
+          <option>Excellent</option>
+          <option>Good</option>
+          <option>Average</option>
+          <option>Needs Improvement</option>
+        </select><br><br>
+
+        <div style="text-align:center">
+          <button type="submit" style="padding:12px 28px;border-radius:8px;border:none;background:var(--panel);color:#fff;cursor:pointer">Submit</button>
+        </div>
+      </form>
    
+    </section>
 
-<section id="foood-section">
-<br>
-<h1 style="font-size: 2.2em; margin-bottom: 20px; color: white;">Explore My Projects</h1>
-<center>
-<div id="content" style="background-color: #111; padding: 30px; text-align: center; color: white; border-radius: 12px; width:60%;">
-  
-  <p style="font-size: 1.3em; margin-bottom: 30px; color:#888">Click the links below to visit my featured works!</p>
-
-<div style="display: flex; justify-content: space-between; gap: 20px; margin-bottom: 25px;">
-
-<div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
-
-    <div class="project-card">
-  <p style="font-weight: bold;">Web Project: Credit Card Fraud Detection</p>
-  <p style="margin-bottom: 15px;">Built an ML model using Python, Pandas, and Scikit-learn to detect fraudulent transactions with high accuracy.</p>
-  <button onclick="window.open('https://github.com/Sarika191/creditcard_fraud_detection','_blank');"
-          class="project-button">
-    Fraud Detection
-  </button>
-</div>
-    
-    <div class="project-card">
-  <p style="font-weight: bold;">Web Project: Student-Teacher Appointment</p>
-  <p style="margin-bottom: 15px;">Manage appointments easily between students and teachers with a user-friendly interface using Firebase!</p>
-  <button onclick="window.open('https://github.com/Sarika191/Teacher_student_appointment_portal','_blank');"
-          class="project-button">
-    Teacher Appointment
-  </button>
-</div>
-
-
-<div class="project-card">
-  <p style="font-weight: bold;">Game Project: Tic Tac Toe</p>
-  <p style="margin-bottom: 15px;">This is my Tic Tac Toe game project, Cross-O-Cuties. Play the classic game and challenge your friends.</p>
-  <button onclick="window.open('https://github.com/Sarika191/Cross-O-Cuties','_blank');"
-          class="project-button">
-    Cross-O-Cuties
-  </button>
-</div>
-    
-<div class="project-card center-card">
-  <p style="font-weight: bold;">Game Project: Word Scramble</p>
-  <p style="margin-bottom: 15px;">Try out Scramble Mania — a fun word game where you unscramble jumbled words within a time limit!</p>
-  <button onclick="window.open('https://github.com/Sarika191/ScrambleMania','_blank');"
-          class="project-button">
-    Scramble Mania
-  </button>
-</div>
-
-
-
-
-
-</div>
-
-
-</section>
-</center>
-</div>
-
-<section id="contact-section" style="
-           margin-top: 50px;
-            padding: 20px;
-            background-color: rgba(9, 9, 9, 0.79);
-    background: linear-gradient(135deg);
-    padding: 60px 20px;
-    text-align: center;
-    font-family: 'Segoe UI', sans-serif;
-    transition: background 0.3s ease;
-">
-  <h1 style="color: white;font-size: 2.3rem; margin-bottom: 10px;">Contact Me</h1>
-  
-  <p style="font-size: 1.1rem; color: #999; margin-bottom: 30px;">
-    I'd love to hear from you! Please fill out the form below.
-  </p>
-
-  <form onsubmit="handleSubmit(event)" style="
-      max-width: 600px;
-      margin: auto;
-      text-align: left;
-      background-color: #111;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      transition: box-shadow 0.3s ease;
-    " 
-    onmouseover="this.style.boxShadow='0 10px 25px rgba(0,0,0,0.2)'"
-    onmouseout="this.style.boxShadow='0 8px 20px rgba(0,0,0,0.1)'"
-  >
-    <label style="font-weight: bold;">Name</label><br><br>
-    <input type="text" name="name" required style="
-       width: 90%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #5b5b5b;
-    border-radius: 8px;
-    resize: vertical;
-    background-color: #333;
-    color: #333;
-    font-size: 14px;
-    transition: all 0.3s ease;
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
-" onfocus="this.style.borderColor='#555'; this.style.backgroundColor='#fffbe6';" 
-   onblur="this.style.borderColor='#ccc'; this.style.backgroundColor='#777'; "><br>
-
-    <label style="font-weight: bold;">Email</label><br><br>
-    <input type="email" name="email" required style="
-     width: 90%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #777;
-    border-radius: 8px;
-    resize: vertical;
-    background-color: #333;
-    color: #333;
-    font-size: 14px;
-    transition: all 0.3s ease;
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
-" onfocus="this.style.borderColor='#555'; this.style.backgroundColor='#fffbe6';" 
-   onblur="this.style.borderColor='#ccc'; this.style.backgroundColor='#777'; "><br>
-
- <label for="message" style="font-weight: bold;">Message</label><br><br>
-<textarea name="message" id="message" rows="4" required style="
-    width: 90%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #777;
-    border-radius: 8px;
-    resize: vertical;
-    background-color: #333;
-    color: #333;
-    font-size: 14px;
-    transition: all 0.3s ease;
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
-" onfocus="this.style.borderColor='#555'; this.style.backgroundColor='#fffbe6';" 
-   onblur="this.style.borderColor='#ccc'; this.style.backgroundColor='#777'; "></textarea><br>
-
-
-    <label style="font-weight: bold;">Rate My Portfolio</label><br><br>
-    <select name="rating" required style="
-width: 95%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #777;
-    border-radius: 8px;
-    resize: vertical;
-    background-color: #333;
-    color: #333;
-    font-size: 14px;
-    transition: all 0.3s ease;
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
-" onfocus="this.style.borderColor='#555'; this.style.backgroundColor='#fffbe6';" 
-   onblur="this.style.borderColor='#ccc'; this.style.backgroundColor='#777'; ">
-      <option value="" disabled selected>Select</option>
-      <option>Excellent</option>
-      <option>Good</option>
-      <option>Average</option>
-      <option>Needs Improvement</option>
-    </select><br>
-<center>
-    <button type="submit" style="
-        padding: 12px 30px;
-        border: none;
-        background-color: #333;
-        color: white;
-        border-radius: 8px;
-        cursor: pointer;
-        font-size: 1rem;
-        transition: background-color 0.3s ease, transform 0.2s ease;
-    " onmouseover="this.style.backgroundColor='#555'; this.style.transform='scale(1.05)'" onmouseout="this.style.backgroundColor='#333'; this.style.transform='scale(1)'">
-      Submit
-    </button>
-  
-</center>
-  </form>
-</section>
-  
-          <footer style="text-align: center; padding: 20px; background-color: #333; color: white;">
-    © 2025 Sarika Kaushal | All rights are reserved | Thank you for visiting!
-    <br>
-    Let's connect:
-    <a href="https://www.linkedin.com/in/sarika-kaushal-192a92283" target="_blank" style="color: #00aced; text-decoration: none;">LinkedIn</a> |
-    <a href="https://mail.google.com/mail/?view=cm&to=sarika99770@gmail.com" target="_blank" style="color: #00aced; text-decoration: none;">
-  Email 
+    <footer>
+      © 2025 Sarika Kaushal | All rights are reserved | Thank you for visiting!
+      <br>
+      Let's connect:
+      <a href="https://www.linkedin.com/in/sarika-kaushal-192a92283" target="_blank" style="color: #7bc5f4; text-decoration:none">LinkedIn</a> |
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sarika99770@gmail.com&su=Portfolio%20Inquiry&body=Hi%20Sarika," target="_blank"  style="color: #7bc5f4; text-decoration:none">
+  Email
 </a>
+    </footer>
 
+  </main>
 
-</footer>
-        
-   <script src="script.js">   </script>
+<script src="script.js">   </script>
 </body>
 </html>
 
