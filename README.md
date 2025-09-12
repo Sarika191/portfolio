@@ -13,13 +13,18 @@ This responsive web portfolio acts as my digital resume and creative space. It h
 • Stylish contact form with input focus animations
 • Footer with contact links (LinkedIn, Email)
 
+![HTML5](https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white&style=for-the-badge)  
+![CSS3](https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white&style=for-the-badge)  
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black&style=for-the-badge)  
+![Firebase](https://img.shields.io/badge/-Firebase-FFCA28?logo=firebase&logoColor=black&style=for-the-badge)  
+![Netlify](https://img.shields.io/badge/-Netlify-00C7B7?logo=netlify&logoColor=white&style=for-the-badge)  
+
 Tech Stack
 
 HTML5 – Semantic structure
 CSS3 – Custom animations, gradients, responsive design
 JavaScript – Typewriter effect, scroll-based nav, dynamic form behavior
 Google Fonts & Material Icons – Typography and visual symbols
-Firebase (for other projects) – Real-time backend for appointment system
 Netlify / GitHack – Hosting and deployment
 
 Features
